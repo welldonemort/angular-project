@@ -1,20 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
 
 @Component({
-  selector: 'app-list-service',
-  templateUrl: './list-service.component.html',
-  styleUrls: ['./list-service.component.scss']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss']
 })
-export class ListServiceComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {
-    this.route.queryParams.subscribe(params => {
-      this.tab = params['tab'];
-    });
-  }
+export class MainComponent implements OnInit {
+  constructor() { }
   ngOnInit(): void {
   }
-  tab = ""
   items = {
     "total": 100,
     "data": [
